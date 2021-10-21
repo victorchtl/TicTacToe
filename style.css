@@ -89,3 +89,63 @@
     border: solid 4px #1f104f;
     color: #412da8;
   }
+
+  .winDisplayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .winDisplayBackground {
+    width: 600px;
+    height: 200px;
+    border: solid 10px #e51952;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .lostDisplayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .lostDisplayBackground {
+    width: 600px;
+    height: 200px;
+    border: solid 10px #fed030;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .drawDisplayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .drawDisplayBackground {
+    width: 600px;
+    height: 200px;
+    border: solid 10px #412da8;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
