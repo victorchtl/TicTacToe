@@ -178,7 +178,7 @@ function winDisplay() {
         removeElementsByClass('winDisplayBackground');
         removeElementsByClass('winDisplayText');
         canPlay = true;
-    }, 2000);
+    }, 1000);
 }
 
 function lostDisplay() {
@@ -200,7 +200,7 @@ function lostDisplay() {
         removeElementsByClass('lostDisplayBackground');
         removeElementsByClass('lostDisplayText');
         canPlay = true;
-    }, 2000);
+    }, 1000);
 }
 
 function drawDisplay() {
@@ -222,7 +222,7 @@ function drawDisplay() {
         removeElementsByClass('drawDisplayBackground');
         removeElementsByClass('drawDisplayText');
         canPlay = true;
-    }, 2000);
+    }, 1000);
 }
 
 
