@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 #container {
@@ -10,21 +11,55 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#playersScore {
+.players {
     display: flex;
-    justify-content: space-around;
+    width: 660px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+#symbol1 {
+    width: 50px;
+    height: 50px;
+    background-image: url(images/tictactoe_cross.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#symbol2 {
+    width: 50px;
+    height: 50px;
+    background-image: url(images/tictactoe_circle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#infosP1, #infosP2 {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 #gameboard {
-    width: 600px;
-    height: 600px;
+    width: 660px;
+    height: 660px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1f104f;
+    border-radius: 10px;
 }
 
 .cell {
@@ -34,12 +69,23 @@
 }
 
 #reset-button {
-    background-color: pink;
-    border: none;
-    color: white;
+    background-color: #412da8;
+    border: solid 4px #1f104f;
+    color: #1f104f;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  #reset-button:hover {
+    background-color: #1f104f;
+    border: solid 4px #1f104f;
+    color: #412da8;
   }

@@ -1,6 +1,7 @@
 const boardgame = document.querySelector('#gameboard');
 const resetButton = document.querySelector('#reset-button');
-const playersScore = document.querySelector('#playersScore');
+const players1div = document.querySelector('#infosP1');
+const players2div = document.querySelector('#infosP2');
 let player1Win = 0;
 let player2Win = 0;
 let player1Marks = [];
@@ -19,12 +20,18 @@ const winConditions = [
     [3, 5, 7]
 ];
 let boardCells = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const player1ScoreDisplay = document.createElement('div');
-player1ScoreDisplay.innerHTML = 'You : ' + player1Score;
-playersScore.appendChild(player1ScoreDisplay);
-const player2ScoreDisplay = document.createElement('div');
-player2ScoreDisplay.innerHTML = 'Victor : ' + player2Score;
-playersScore.appendChild(player2ScoreDisplay);
+
+function displayScore() {
+    const player1ScoreDisplay = document.createElement('div');
+    player1ScoreDisplay.id = 'player1score';
+    player1ScoreDisplay.innerHTML = 'You : ' + player1Score;
+    players1div.appendChild(player1ScoreDisplay);
+
+    const player2ScoreDisplay = document.createElement('div');
+    player2ScoreDisplay.id = 'player2score';
+    player2ScoreDisplay.innerHTML = 'Victor : ' + player2Score;
+    players2div.appendChild(player2ScoreDisplay);
+}
 
 
 function fillGameBoard() {
@@ -32,7 +39,8 @@ function fillGameBoard() {
         const cell = document.createElement('div');
         cell.className = 'cell';
         cell.id = (i + 1);
-        cell.style.backgroundColor = '#4444' + i + i;
+        cell.style.backgroundColor = '#412da8';
+        cell.style.borderRadius = '10px';
         boardgame.appendChild(cell);
     }
     document.querySelectorAll('.cell').forEach(cell => cell.addEventListener("click", cellClick));
@@ -137,5 +145,5 @@ resetButton.onclick = function () {
 }
 
 
-
+displayScore();
 fillGameBoard();
